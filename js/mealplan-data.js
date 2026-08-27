@@ -1,0 +1,48 @@
+/* 30-day meal plan. 10 balanced menu templates repeat/rotate across the month
+   (a realistic, sustainable approach rather than 30 fully unique menus). */
+const MEAL_TEMPLATES = [
+  { kcal: '1250–1350 kcal',
+    b: { en: ['Oats with mixed berries', 'One boiled egg', 'Green tea'], ug: ['ياۋا مېۋىلىك سۇلى', 'بىر پىسته پىشقان تۇخۇم', 'يېشىل چاي'] },
+    l: { en: ['Grilled chicken salad', 'Lentil soup', 'Small portion brown rice'], ug: ['كاۋاپ توخۇ سالات', 'قوغۇرچاق شورپىسى', 'ئاز مىقداردا قوڭۇر گۈرۈچ'] },
+    d: { en: ['Grilled fish', 'Steamed broccoli & carrots', 'Herbal tea'], ug: ['كاۋاپ بېلىق', 'بۇغلانغان بروككولى ۋە سابزى', 'ئوت-چۆپ چېيى'] } },
+  { kcal: '1300–1400 kcal',
+    b: { en: ['Greek yogurt with kiwi & walnuts', 'Whole grain toast', 'Green tea'], ug: ['گرېك يوگۇرتى، كىۋى ۋە ياڭاق بىلەن', 'پۈتۈن دان نان', 'يېشىل چاي'] },
+    l: { en: ['Turkey & spinach wrap', 'Tomato soup', 'Quinoa'], ug: ['كۇركا-ئىسپىناق رولونى', 'پومىدۇر شورپىسى', 'كىنوئا'] },
+    d: { en: ['Baked chicken breast', 'Steamed cabbage', 'Herbal tea'], ug: ['موماي توخۇ كۆكرىكى', 'بۇغلانغان كارام', 'ئوت-چۆپ چېيى'] } },
+  { kcal: '1200–1300 kcal',
+    b: { en: ['Vegetable omelet (2 eggs)', 'One apple', 'Green tea'], ug: ['كۆكتاتلىق ئومېلىت (٢ تۇخۇم)', 'بىر ئالما', 'يېشىل چاي'] },
+    l: { en: ['Lentil & vegetable stew', 'Side salad', 'Small portion brown rice'], ug: ['قوغۇرچاق-كۆكتات شورپىسى', 'يانداش سالات', 'ئاز مىقداردا قوڭۇر گۈرۈچ'] },
+    d: { en: ['Grilled shrimp', 'Cucumber & lettuce salad', 'Herbal tea'], ug: ['كاۋاپ crevette', 'خىيار-كاھۇ سالات', 'ئوت-چۆپ چېيى'] } },
+  { kcal: '1300–1400 kcal',
+    b: { en: ['Oatmeal with cinnamon & banana (small)', 'One boiled egg', 'Green tea'], ug: ['دارچىن ۋە موز (ئازراق) قوشۇلغان سۇلى', 'بىر پىسته پىشقان تۇخۇم', 'يېشىل چاي'] },
+    l: { en: ['Grilled fish salad', 'Broccoli soup', 'Quinoa'], ug: ['كاۋاپ بېلىق سالات', 'بروككولى شورپىسى', 'كىنوئا'] },
+    d: { en: ['Chicken & vegetable stir-fry (light oil)', 'Herbal tea'], ug: ['توخۇ-كۆكتات قوغلاش (ئاز ماي)', 'ئوت-چۆپ چېيى'] } },
+  { kcal: '1250–1350 kcal',
+    b: { en: ['Whole grain toast with avocado', 'One boiled egg', 'Green tea'], ug: ['ئاۋوكادولۇق پۈتۈن دان نان', 'بىر پىسته پىشقان تۇخۇم', 'يېشىل چاي'] },
+    l: { en: ['Chickpea & spinach salad', 'Lentil soup', 'Brown rice'], ug: ['نوخۇت-ئىسپىناق سالات', 'قوغۇرچاق شورپىسى', 'قوڭۇر گۈرۈچ'] },
+    d: { en: ['Grilled turkey', 'Steamed green beans', 'Herbal tea'], ug: ['كاۋاپ كۇركا', 'بۇغلانغان لوبىيا', 'ئوت-چۆپ چېيى'] } },
+  { kcal: '1200–1300 kcal',
+    b: { en: ['Berry & yogurt smoothie (no added sugar)', 'One boiled egg', 'Green tea'], ug: ['مېۋە-يوگۇرت smoothie (شېكەرسىز)', 'بىر پىسته پىشقان تۇخۇم', 'يېشىل چاي'] },
+    l: { en: ['Grilled chicken', 'Cucumber-tomato salad', 'Small portion brown rice'], ug: ['كاۋاپ توخۇ', 'خىيار-پومىدۇر سالات', 'ئاز مىقداردا قوڭۇر گۈرۈچ'] },
+    d: { en: ['Baked fish', 'Steamed spinach', 'Herbal tea'], ug: ['موماي بېلىق', 'بۇغلانغان ئىسپىناق', 'ئوت-چۆپ چېيى'] } },
+  { kcal: '1300–1400 kcal',
+    b: { en: ['Oats with grated apple & walnuts', 'Green tea'], ug: ['ئالما ۋە ياڭاق قوشۇلغان سۇلى', 'يېشىل چاي'] },
+    l: { en: ['Tuna salad', 'Vegetable soup', 'Quinoa'], ug: ['تۇنېس بېلىق سالات', 'كۆكتات شورپىسى', 'كىنوئا'] },
+    d: { en: ['Grilled chicken breast', 'Roasted vegetables (olive oil)', 'Herbal tea'], ug: ['كاۋاپ توخۇ كۆكرىكى', 'موماي كۆكتات (زەيتۇن مېيى)', 'ئوت-چۆپ چېيى'] } },
+  { kcal: '1250–1350 kcal',
+    b: { en: ['Two boiled eggs', 'Whole grain toast', 'One kiwi', 'Green tea'], ug: ['ئىككى پىسته پىشقان تۇخۇم', 'پۈتۈن دان نان', 'بىر كىۋى', 'يېشىل چاي'] },
+    l: { en: ['Lentil soup', 'Mixed greens salad', 'Small portion brown rice'], ug: ['قوغۇرچاق شورپىسى', 'ئارىلاش يېشىل كۆكتات سالات', 'ئاز مىقداردا قوڭۇر گۈرۈچ'] },
+    d: { en: ['Grilled fish', 'Steamed broccoli', 'Herbal tea'], ug: ['كاۋاپ بېلىق', 'بۇغلانغان بروككولى', 'ئوت-چۆپ چېيى'] } },
+  { kcal: '1200–1300 kcal',
+    b: { en: ['Cottage cheese with berries', 'Green tea'], ug: ['مېۋىلىك ئىۋىر پىنىر', 'يېشىل چاي'] },
+    l: { en: ['Grilled chicken & vegetable bowl', 'Side salad', 'Quinoa'], ug: ['كاۋاپ توخۇ-كۆكتات تەخسىسى', 'يانداش سالات', 'كىنوئا'] },
+    d: { en: ['Baked salmon', 'Steamed cabbage & carrots', 'Herbal tea'], ug: ['موماي سالمون بېلىق', 'بۇغلانغان كارام ۋە سابزى', 'ئوت-چۆپ چېيى'] } },
+  { kcal: '1300–1400 kcal',
+    b: { en: ['Oats with pear slices & flax seeds', 'One boiled egg', 'Green tea'], ug: ['ئالمۇرۇت ۋە زىغىر ئۇرۇقى قوشۇلغان سۇلى', 'بىر پىسته پىشقان تۇخۇم', 'يېشىل چاي'] },
+    l: { en: ['Bean & vegetable soup', 'Side salad', 'Small portion brown rice'], ug: ['لوبىيا-كۆكتات شورپىسى', 'يانداش سالات', 'ئاز مىقداردا قوڭۇر گۈرۈچ'] },
+    d: { en: ['Grilled turkey breast', 'Steamed green beans & spinach', 'Herbal tea'], ug: ['كاۋاپ كۇركا كۆكرىكى', 'بۇغلانغان لوبىيا ۋە ئىسپىناق', 'ئوت-چۆپ چېيى'] } },
+];
+
+function getMealForDay(day) {
+  return MEAL_TEMPLATES[(day - 1) % MEAL_TEMPLATES.length];
+}
