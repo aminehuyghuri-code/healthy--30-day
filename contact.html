@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Healthy 30 Days</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header" id="site-header"></header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="icon-row"><span data-icon="chat"></span></div>
+      <h1 class="is-active" data-lang="en">Contact Us</h1>
+      <h1 class="ug-text" data-lang="ug" lang="ug">بىز بىلەن ئالاقىلىشىڭ</h1>
+      <p class="section-lead text-center is-active" data-lang="en">Questions, feedback, or need support? Send us a message.</p>
+      <p class="section-lead text-center ug-text" data-lang="ug" lang="ug">سوئال، پىكىر ياكى قوللاش كېرەكمۇ؟ بىزگە ئۇچۇر ئەۋەتىڭ.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container text-center">
+      <form class="form-grid" id="contactForm" style="margin-left:auto;margin-right:auto;">
+        <div>
+          <label class="is-active" data-lang="en">Name</label><label class="ug-text" data-lang="ug" lang="ug">ئىسمى</label>
+          <input type="text" required placeholder="Your name">
+        </div>
+        <div>
+          <label class="is-active" data-lang="en">Email</label><label class="ug-text" data-lang="ug" lang="ug">ئېلخەت</label>
+          <input type="email" required placeholder="you@example.com">
+        </div>
+        <div>
+          <label class="is-active" data-lang="en">Message</label><label class="ug-text" data-lang="ug" lang="ug">ئۇچۇر</label>
+          <textarea rows="5" required placeholder="How can we help?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          <span class="is-active" data-lang="en">Send Message</span><span class="ug-text" data-lang="ug" lang="ug">ئۇچۇر ئەۋەتىش</span>
+        </button>
+      </form>
+      <p class="form-msg" id="contactMsg" style="max-width:420px;margin:16px auto 0;">
+        <span class="is-active" data-lang="en">✓ Thanks! We'll get back to you soon.</span>
+        <span class="ug-text" data-lang="ug" lang="ug">✓ رەھمەت! سىزگە تېزدىن جاۋاب بېرىمىز.</span>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/icons.js"></script>
+<script src="js/components.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/chatbot.js"></script>
+<script src="js/main.js"></script>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  document.getElementById('contactMsg').classList.add('is-visible');
+  this.reset();
+});
+</script>
+</body>
+</html>

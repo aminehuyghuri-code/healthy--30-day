@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calorie Calculator — Healthy 30 Days</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header" id="site-header"></header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="icon-row"><span data-icon="grain"></span></div>
+      <h1 class="is-active" data-lang="en">Calorie Calculator</h1>
+      <h1 class="ug-text" data-lang="ug" lang="ug">كالورىيە ھېسابلىغۇچ</h1>
+      <p class="section-lead text-center is-active" data-lang="en">Get a personalized, safe daily calorie target for weight loss.</p>
+      <p class="section-lead text-center ug-text" data-lang="ug" lang="ug">شەخسىي، بىخەتەر كۈندىلىك كالورىيە نىشانىڭىزنى بىلىڭ.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container text-center">
+      <form id="calorieForm" class="form-grid" style="margin-left:auto;margin-right:auto;">
+        <div>
+          <label class="is-active" data-lang="en">Age</label><label class="ug-text" data-lang="ug" lang="ug">ياش</label>
+          <input type="number" id="calAge" required min="15" max="80" placeholder="e.g. 28">
+        </div>
+        <div>
+          <label class="is-active" data-lang="en">Height (cm)</label><label class="ug-text" data-lang="ug" lang="ug">بوي (سانتىمېتىر)</label>
+          <input type="number" id="calHeight" required min="120" max="220" placeholder="e.g. 165">
+        </div>
+        <div>
+          <label class="is-active" data-lang="en">Weight (kg)</label><label class="ug-text" data-lang="ug" lang="ug">ئېغىرلىق (كىلوگرام)</label>
+          <input type="number" id="calWeight" required min="30" max="250" placeholder="e.g. 68">
+        </div>
+        <div>
+          <label class="is-active" data-lang="en">Activity Level</label><label class="ug-text" data-lang="ug" lang="ug">ھەرىكەت دەرىجىسى</label>
+          <select id="calActivity"
+            data-en-0="Sedentary (little/no exercise)" data-ug-0="ئولتۇرغاق (ئاز/چېنىقىشسىز)"
+            data-en-1="Light (1–3 days/week)" data-ug-1="يېنىك (ھەپتىدە 1-3 كۈن)"
+            data-en-2="Moderate (3–5 days/week)" data-ug-2="ئوتتۇرا (ھەپتىدە 3-5 كۈن)"
+            data-en-3="Active (6–7 days/week)" data-ug-3="پائال (ھەپتىدە 6-7 كۈن)">
+            <option value="1.2">Sedentary (little/no exercise)</option>
+            <option value="1.375">Light (1–3 days/week)</option>
+            <option value="1.55">Moderate (3–5 days/week)</option>
+            <option value="1.725">Active (6–7 days/week)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          <span class="is-active" data-lang="en">Calculate</span><span class="ug-text" data-lang="ug" lang="ug">ھېسابلاش</span>
+        </button>
+      </form>
+      <div class="result-box" id="calorieResult" style="max-width:420px;margin:20px auto 0;">
+        <p class="is-active" data-lang="en"></p><p class="ug-text" data-lang="ug" lang="ug"></p>
+      </div>
+
+      <div class="notice-box" style="max-width:640px;margin:36px auto 0;text-align:left;">
+        <span class="is-active" data-lang="en">⚠️ This target is capped at a safe minimum of 1,200 kcal/day. Very active women or those with medical conditions should consult a healthcare provider before starting any calorie-restricted plan.</span>
+        <span class="ug-text" data-lang="ug" lang="ug">⚠️ بۇ نىشان كۈندە ئەڭ تۆۋەن 1200 كالورىيە بىلەن چەكلىنىدۇ. بەك پائال ياكى دوختۇرلۇق كېسىلى بار ئاياللار ھەر قانداق كالورىيە چەكلىمە پىلانىنى باشلاشتىن ئىلگىرى دوختۇر بىلەن مەسلىھەتلىشىڭ.</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/icons.js"></script>
+<script src="js/components.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/chatbot.js"></script>
+<script src="js/main.js"></script>
+<script src="js/calculators.js"></script>
+</body>
+</html>

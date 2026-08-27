@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>30-Day Meal Plan — Healthy 30 Days</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header" id="site-header"></header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="icon-row">
+        <span data-icon="calendarIcon"></span><span data-icon="egg"></span><span data-icon="fish"></span>
+      </div>
+      <span class="eyebrow is-active" data-lang="en">Page 4</span>
+      <span class="eyebrow ug-text" data-lang="ug" lang="ug">4-بەت</span>
+      <h1 class="is-active" data-lang="en">30-Day Meal Plan</h1>
+      <h1 class="ug-text" data-lang="ug" lang="ug">30 كۈنلۈك تاماق پىلانى</h1>
+      <p class="section-lead text-center is-active" data-lang="en">Click any day to see breakfast, lunch, and dinner. Mark days complete as you go.</p>
+      <p class="section-lead text-center ug-text" data-lang="ug" lang="ug">تاماق كۆرۈش ئۈچۈن خالىغان كۈننى چېكىڭ. تاماملانغان كۈنلەرنى بەلگىلەڭ.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div style="text-align:center;">
+        <a href="#" class="btn btn-sage btn-sm" data-print>
+          <span class="is-active" data-lang="en">⬇ Download / Print PDF Meal Plan</span>
+          <span class="ug-text" data-lang="ug" lang="ug">⬇ PDF چۈشۈرۈش / بېسىش</span>
+        </a>
+      </div>
+
+      <div class="calendar-grid" id="calendarGrid"></div>
+
+      <div class="meal-detail" id="mealDetail">
+        <h3>
+          <span class="is-active" data-lang="en" data-day-label="en">Day 1</span>
+          <span class="ug-text" data-lang="ug" lang="ug" data-day-label="ug">1-كۈن</span>
+          — <span class="is-active" data-lang="en" data-kcal="en">1250 kcal</span><span class="ug-text" data-lang="ug" lang="ug" data-kcal="ug">1250 كالورىيە</span>
+        </h3>
+        <div class="meal-detail__grid">
+          <div class="meal-block" id="breakfastList">
+            <h4><span data-icon="egg" style="width:24px;height:24px;"></span>
+              <span class="is-active" data-lang="en">Breakfast</span><span class="ug-text" data-lang="ug" lang="ug">چۈشلۈك تاماق</span>
+            </h4>
+            <ul class="is-active" data-lang="en"></ul>
+            <ul class="ug-text" data-lang="ug" lang="ug"></ul>
+          </div>
+          <div class="meal-block" id="lunchList">
+            <h4><span data-icon="lentil" style="width:24px;height:24px;"></span>
+              <span class="is-active" data-lang="en">Lunch</span><span class="ug-text" data-lang="ug" lang="ug">چۈش تاماق</span>
+            </h4>
+            <ul class="is-active" data-lang="en"></ul>
+            <ul class="ug-text" data-lang="ug" lang="ug"></ul>
+          </div>
+          <div class="meal-block" id="dinnerList">
+            <h4><span data-icon="fish" style="width:24px;height:24px;"></span>
+              <span class="is-active" data-lang="en">Dinner</span><span class="ug-text" data-lang="ug" lang="ug">كەچلىك تاماق</span>
+            </h4>
+            <ul class="is-active" data-lang="en"></ul>
+            <ul class="ug-text" data-lang="ug" lang="ug"></ul>
+          </div>
+        </div>
+        <div style="margin-top:22px;text-align:center;">
+          <button type="button" class="btn btn-outline btn-sm" id="markDoneBtn">
+            <span class="is-active" data-lang="en">✓ Mark this day complete</span>
+            <span class="ug-text" data-lang="ug" lang="ug">✓ بۇ كۈننى تاماملانغان دەپ بەلگىلە</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="notice-box container is-active" data-lang="en">
+    💡 Menus rotate across a set of 10 balanced templates for variety and easier grocery planning — swap any item for a similar food from the Nutrition Guide.
+  </div>
+  <div class="notice-box container ug-text" data-lang="ug" lang="ug">
+    💡 تۈرلۈك ۋە سودا-سېتىق پىلانلاشقا قۇلايلىق بولۇشى ئۈچۈن، تاماق تۈرلىرى 10 خىل تەڭپۇڭ ئۈلگە ئارىسىدا ئايلىنىدۇ — خالىغان تۈرنى ئوزۇقلىنىش يېتەكچىسىدىكى ئوخشاش تاماققا ئالماشتۇرسىڭىز بولىدۇ.
+  </div>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/icons.js"></script>
+<script src="js/components.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/chatbot.js"></script>
+<script src="js/main.js"></script>
+<script src="js/mealplan-data.js"></script>
+<script src="js/mealplan-page.js"></script>
+</body>
+</html>

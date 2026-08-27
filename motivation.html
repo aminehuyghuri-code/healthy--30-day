@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motivation & Progress Tracking — Healthy 30 Days</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header" id="site-header"></header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="icon-row">
+        <span data-icon="chart"></span><span data-icon="check"></span><span data-icon="berries"></span>
+      </div>
+      <span class="eyebrow is-active" data-lang="en">Page 7</span>
+      <span class="eyebrow ug-text" data-lang="ug" lang="ug">7-بەت</span>
+      <h1 class="is-active" data-lang="en">Motivation & Progress Tracking</h1>
+      <h1 class="ug-text" data-lang="ug" lang="ug">روھلاندۇرۇش ۋە ئىلگىرىلەشنى ئىز قوغلاش</h1>
+      <p class="section-lead text-center is-active" data-lang="en">Progress isn't always linear — track it, celebrate it, keep going.</p>
+      <p class="section-lead text-center ug-text" data-lang="ug" lang="ug">ئىلگىرىلەش ھەمىشە تۈز سىزىق ئەمەس — ئىز قوغلاڭ، تەبرىكلەڭ، داۋاملاشتۇرۇڭ.</p>
+    </div>
+  </section>
+
+  <!-- WEEKLY WEIGHT CHART -->
+  <section>
+    <div class="container" style="max-width:720px;">
+      <h2 class="section-title text-center is-active" data-lang="en">Weekly Weight Chart</h2>
+      <h2 class="section-title text-center ug-text" data-lang="ug" lang="ug">ھەپتىلىك ئېغىرلىق جەدۋىلى</h2>
+      <div class="bar-chart" id="weightChart"></div>
+      <form id="weightForm" style="display:flex;gap:10px;justify-content:center;margin-top:24px;flex-wrap:wrap;align-items:flex-end;">
+        <div>
+          <label class="is-active" data-lang="en">Week</label><label class="ug-text" data-lang="ug" lang="ug">ھەپتە</label>
+          <select id="weightWeek" style="width:100px;">
+            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
+          </select>
+        </div>
+        <div>
+          <label class="is-active" data-lang="en">Weight (kg)</label><label class="ug-text" data-lang="ug" lang="ug">ئېغىرلىق (كىلوگرام)</label>
+          <input type="number" id="weightValue" step="0.1" min="20" max="250" style="width:140px;">
+        </div>
+        <button type="submit" class="btn btn-primary btn-sm">
+          <span class="is-active" data-lang="en">Log Weight</span><span class="ug-text" data-lang="ug" lang="ug">خاتىرىلەش</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- BEFORE/AFTER PHOTOS -->
+  <section class="section-alt">
+    <div class="container text-center" style="max-width:640px;">
+      <h2 class="section-title is-active" data-lang="en">Before / After Photos</h2>
+      <h2 class="section-title ug-text" data-lang="ug" lang="ug">بۇرۇنقى / كېيىنكى رەسىملەر</h2>
+      <p class="is-active" data-lang="en">Private to your browser only — nothing is uploaded anywhere.</p>
+      <p class="ug-text" data-lang="ug" lang="ug">پەقەت سىزنىڭ بۇلغۇچىڭىزدا ساقلىنىدۇ — ھېچ يەرگە يۈكلەنمەيدۇ.</p>
+      <div class="photo-upload-grid" style="margin-left:auto;margin-right:auto;">
+        <label class="photo-slot" data-slot="before">
+          <input type="file" accept="image/*">
+          <span class="is-active" data-lang="en">📷 Upload "Before" photo</span>
+          <span class="ug-text" data-lang="ug" lang="ug">📷 «بۇرۇنقى» رەسىم يۈكلەڭ</span>
+        </label>
+        <label class="photo-slot" data-slot="after">
+          <input type="file" accept="image/*">
+          <span class="is-active" data-lang="en">📷 Upload "After" photo</span>
+          <span class="ug-text" data-lang="ug" lang="ug">📷 «كېيىنكى» رەسىم يۈكلەڭ</span>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY HABIT TRACKER -->
+  <section>
+    <div class="container" style="max-width:680px;">
+      <h2 class="section-title text-center is-active" data-lang="en">Daily Habit Tracker</h2>
+      <h2 class="section-title text-center ug-text" data-lang="ug" lang="ug">كۈندىلىك ئادەت ئىز قوغلىغۇچ</h2>
+      <ul class="checklist" id="habitTracker">
+        <li><input type="checkbox" id="h-water"><label for="h-water" style="margin:0;"><span class="is-active" data-lang="en">Drank 2–3L water</span><span class="ug-text" data-lang="ug" lang="ug">2-3 لىتىر سۇ ئىچتىم</span></label></li>
+        <li><input type="checkbox" id="h-move"><label for="h-move" style="margin:0;"><span class="is-active" data-lang="en">Completed movement checklist</span><span class="ug-text" data-lang="ug" lang="ug">ھەرىكەت تىزىملىكىنى تاماملىدىم</span></label></li>
+        <li><input type="checkbox" id="h-meal"><label for="h-meal" style="margin:0;"><span class="is-active" data-lang="en">Followed today's meal plan</span><span class="ug-text" data-lang="ug" lang="ug">بۈگۈنكى تاماق پىلانىغا ئەمەل قىلدىم</span></label></li>
+        <li><input type="checkbox" id="h-sleep"><label for="h-sleep" style="margin:0;"><span class="is-active" data-lang="en">Slept 7–8 hours</span><span class="ug-text" data-lang="ug" lang="ug">7-8 سائەت ئۇخلىدىم</span></label></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- QUOTES -->
+  <section class="section-sage">
+    <div class="container text-center" style="max-width:640px;">
+      <h2 class="section-title is-active" data-lang="en">A Little Encouragement</h2>
+      <h2 class="section-title ug-text" data-lang="ug" lang="ug">ئازراق روھلاندۇرۇش</h2>
+      <div class="feature-grid" style="margin-top:20px;">
+        <div class="quote-card is-active" data-lang="en">"Progress, not perfection."</div>
+        <div class="quote-card ug-text" data-lang="ug" lang="ug">«مۇكەممەللىك ئەمەس، ئىلگىرىلەش.»</div>
+        <div class="quote-card is-active" data-lang="en">"Small steps every day lead to big changes."</div>
+        <div class="quote-card ug-text" data-lang="ug" lang="ug">«ھەر كۈنلۈك كىچىك قەدەملەر چوڭ ئۆزگىرىشكە ئېلىپ بارىدۇ.»</div>
+        <div class="quote-card is-active" data-lang="en">"You didn't come this far to only come this far."</div>
+        <div class="quote-card ug-text" data-lang="ug" lang="ug">«بۇ يەرگىچە كەلگىنىڭىز پەقەت بۇ يەردە توختاپ قېلىش ئۈچۈن ئەمەس.»</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY SUPPORT -->
+  <section>
+    <div class="container text-center" style="max-width:640px;">
+      <div class="card" style="padding:36px;">
+        <div class="card__icon" data-icon="chat" style="margin:0 auto 14px;"></div>
+        <h2 class="section-title is-active" data-lang="en">You're Not Doing This Alone</h2>
+        <h2 class="section-title ug-text" data-lang="ug" lang="ug">بۇنى يالغۇز قىلمايۋاتىسىز</h2>
+        <p class="is-active" data-lang="en">Have questions or need encouragement? Use the "Ask a Coach" chat in the bottom corner, or reach out through our <a href="contact.html" style="color:var(--pink-600);font-weight:700;">Contact page</a>.</p>
+        <p class="ug-text" data-lang="ug" lang="ug">سوئالىڭىز بارمۇ ياكى روھلاندۇرۇش كېرەكمۇ؟ ئاستى بۇرجىكىدىكى «مۇرەببىيدىن سوراش» سۆھبىتىنى ئىشلىتىڭ ياكى <a href="contact.html" style="color:var(--pink-600);font-weight:700;">ئالاقىلىشىش بېتى</a> ئارقىلىق بىز بىلەن ئالاقىلىشىڭ.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/icons.js"></script>
+<script src="js/components.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/chatbot.js"></script>
+<script src="js/main.js"></script>
+<script src="js/tracker.js"></script>
+</body>
+</html>
