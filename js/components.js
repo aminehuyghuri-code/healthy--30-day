@@ -7,7 +7,6 @@ const NAV_LINKS = [
   { href: 'meal-plan.html', en: 'Meal Plan', ug: 'تاماق پىلانى' },
   { href: 'water.html', en: 'Water', ug: 'سۇ' },
   { href: 'lifestyle.html', en: 'Lifestyle', ug: 'تۇرمۇش ئادىتى' },
-  { href: 'motivation.html', en: 'Motivation', ug: 'روھلاندۇرۇش' },
 ];
 
 const MORE_LINKS = [
